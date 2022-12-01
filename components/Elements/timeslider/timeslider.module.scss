@@ -1,0 +1,55 @@
+.timeslider {
+	width: 250px;
+	height: 54px;
+
+	&__title {
+		font-size: 18px;
+		line-height: 23px;
+		margin-bottom: 18px;
+	}
+
+	.timeslider__line {
+		display: flex;
+
+		align-items: center;
+		width: 250px;
+		height: 20px;
+		background-color: white;
+		border: 1px solid #0039a6;
+		border-radius: 4px;
+
+		&_thumb {
+			width: 25px;
+			height: 25px;
+			background-image: url('/TimeStopShift.svg');
+			div {
+				margin-top: 30px;
+				width: 35px;
+				height: 16px;
+				padding-left: 0px;
+			}
+		}
+		&_thumb:nth-child(2n) {
+			background-image: url('/Clock.svg');
+			width: 34px;
+			height: 34px;
+			div {
+				margin-top: 36px;
+				width: 35px;
+				height: 16px;
+				padding-left: 3px;
+			}
+		}
+		&_track {
+			height: 20px;
+		}
+		&_track:nth-child(2) {
+			background: #0039a6;
+			border-radius: 10px;
+		}
+		&_track:nth-child(3) {
+			background: #0039a6;
+			border-radius: 10px;
+		}
+	}
+}

@@ -1,0 +1,112 @@
+.messanger {
+	width: 315px;
+	height: 674px;
+	background: #ffffff;
+	border: 0.5px solid #0039a6;
+	border-radius: 6px;
+	margin-top: 28px;
+	margin-right: 17px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 60px;
+	&__title {
+		margin-top: 30px;
+		font-size: 24px;
+		line-height: 30px;
+		color: #266498;
+		display: flex;
+		justify-content: center;
+	}
+	&__header {
+		margin-top: 26px;
+		width: 100%;
+		height: 44px;
+		background: rgba(222, 222, 222, 0.5);
+		display: flex;
+		align-items: center;
+		padding: 0 15px;
+		&_arrow {
+			margin-right: 8px;
+		}
+		&_avatar {
+			margin-right: 8px;
+		}
+		&_name {
+			margin-right: 70px;
+		}
+	}
+	&__communication {
+		height: 398px;
+		width: 100%;
+		padding: 5px 23px;
+
+		margin-top: 48px;
+
+		&_interlocutor {
+			width: 210px;
+			min-width: 50px;
+			max-width: 240px;
+			background-color: #dcdcdc;
+			border-radius: 20px;
+			padding: 12px 18px;
+			margin-bottom: 18px;
+			position: relative;
+			&_arrow {
+				position: absolute;
+			}
+		}
+		&_my {
+			width: 210px;
+			min-width: 50px;
+			max-width: 240px;
+			color: #ffffff;
+			background-color: #5c8fc9;
+			border-radius: 20px;
+			padding: 12px 18px;
+			margin-bottom: 18px;
+			position: relative;
+			left: 20%;
+			&_arrow {
+				position: absolute;
+			}
+		}
+	}
+	&__input {
+		width: 267px;
+		height: 60px;
+		border: 0.5px solid #0039a6;
+		border-radius: 5px;
+		display: flex;
+		padding: 0 17px;
+		position: relative;
+		&_addphonebutton {
+			position: absolute;
+			top: -82px;
+			left: 5px;
+		}
+		&_addlocationbutton {
+			position: absolute;
+			top: -40px;
+			left: 5px;
+		}
+		&_addbutton {
+			display: flex;
+			flex-direction: column;
+			height: 60px;
+			justify-content: space-around;
+		}
+		&_field {
+			width: 191px;
+			padding: 0 5px;
+			height: 58px;
+		}
+		&_send {
+			margin-left: 6px;
+			width: 16px;
+			background-color: white;
+			padding-bottom: 22px;
+		}
+	}
+}
