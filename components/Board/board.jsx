@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from '../Board/board.module.scss';
 import Button from '../Elements/buttons/button';
-import SearchButton from '../Elements/buttons/search_button';
 import InputSearch from './../Elements/inputSearch/inputsearch';
 import List from './../Elements/list/list';
 
@@ -27,18 +26,14 @@ const Board = () => {
 					setActive={setModalActive}
 				/>
 
-				<List
-					active={modalActive}
-					setActive={setModalActive}
-				/>
-			</div>
-			<div className={styles.board__button}>
-				<button onClick={() => setModalActive(!modalActive)}>
-					<SearchButton />
-				</button>
+				<List active={modalActive} setActive={setModalActive} />
 			</div>
 
-			<div className={styles.board__button}></div>
+			<button
+				className={styles.board__button}
+				onClick={() => setModalActive(!modalActive)}>
+				SEARCH
+			</button>
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 .board {
-	width: 315px;
+	min-width: 315px;
 	height: 674px;
 	background: #ffffff;
 	border: 0.5px solid #0039a6;
@@ -12,7 +12,7 @@
 	align-items: center;
 
 	&__title {
-		margin-top: 40px;
+		margin-top: 19px;
 		font-size: 24px;
 		line-height: 30px;
 		color: #266498;
@@ -45,5 +45,14 @@
 	}
 	&__button {
 		margin-top: 40px;
+		margin-bottom: 20px;
+		background: #266498;
+		border-radius: 3px;
+		width: 185px;
+		height: 37px;
+		color: #ffffff;
+		font-size: 18px;
+		line-height: 23px;
+		padding-bottom: 2px;
 	}
 }
