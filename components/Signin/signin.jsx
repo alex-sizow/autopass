@@ -26,7 +26,9 @@ const SignIn = ({ active, setActive }) => {
 			<div
 				className={styles.signin}
 				onClick={(e) => e.stopPropagation()}>
-				<button className={styles.signin__close}>
+				<button
+					className={styles.signin__close}
+					onClick={() => setActive(false)}>
 					<Image
 						src='/Close.svg'
 						alt='Picture of the author'
@@ -67,11 +69,15 @@ const SignIn = ({ active, setActive }) => {
 						type='password'
 						placeholder='*********'
 						onChange={({ target }) =>
-							setUserInfo({ ...userInfo, password: target.value })
+							setUserInfo({
+								...userInfo,
+								password: target.value,
+							})
 						}
 					/>
 					<div className={styles.signin__input_button}>
-						<button className={styles.signin__input_button_forgot}>
+						<button
+							className={styles.signin__input_button_forgot}>
 							Forgot password?
 						</button>
 						<button

@@ -53,6 +53,9 @@
 		color: #ffffff;
 		font-size: 18px;
 		line-height: 23px;
-		padding-bottom: 2px;
+		padding: auto 0;
+	}
+	&__button:hover {
+		background: #136639;
 	}
 }

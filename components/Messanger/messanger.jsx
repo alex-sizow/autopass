@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import AddPhone from '../Addphone/addphone';
+import AddLocation from '../Elements/Addlocation/Addlocation';
+import AddPhone from '../Elements/Addphone/addphone';
 import styles from '../Messanger/messanger.module.scss';
 const Messanger = () => {
-	const [modalActive, setModalActive] = useState(false);
-
+	const [phoneActive, setPhoneActive] = useState(false);
+	const [locationActive, setLocationActive] = useState(false);
 	const [message, setMessage] = useState(['blabla']);
 	const [text, setText] = useState('');
 
@@ -50,12 +51,16 @@ const Messanger = () => {
 			</div>
 			<div className={styles.messanger__communication}>
 				<div
-					className={styles.messanger__communication_interlocutor}>
+					className={
+						styles.messanger__communication_interlocutor
+					}>
 					Bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 					bla bla bla bla
 				</div>
 				<div
-					className={styles.messanger__communication_interlocutor}>
+					className={
+						styles.messanger__communication_interlocutor
+					}>
 					<div>bla bla bla bla</div>
 					<Image
 						className={
@@ -85,7 +90,7 @@ const Messanger = () => {
 			</div>
 			<div className={styles.messanger__input}>
 				<div>
-					<button onClick={() => setModalActive(true)}>
+					<button onClick={() => setPhoneActive(true)}>
 						<Image
 							className={styles.messanger__input_addphonebutton}
 							src='/AddPhoneButton.svg'
@@ -94,13 +99,17 @@ const Messanger = () => {
 							height={31}
 						/>
 					</button>
-					<Image
-						className={styles.messanger__input_addlocationbutton}
-						src='/AddLocationButton.svg'
-						alt='Picture of the author'
-						width={31}
-						height={31}
-					/>
+					<button onClick={() => setLocationActive(true)}>
+						<Image
+							className={
+								styles.messanger__input_addlocationbutton
+							}
+							src='/AddLocationButton.svg'
+							alt='Picture of the author'
+							width={31}
+							height={31}
+						/>
+					</button>
 				</div>
 				<div className={styles.messanger__input_addbutton}>
 					<Image
@@ -133,9 +142,13 @@ const Messanger = () => {
 					/>
 				</button>
 			</div>
+			<AddLocation
+				active={locationActive}
+				setActive={setLocationActive}
+			/>
 			<AddPhone
-				active={modalActive}
-				setActive={setModalActive}
+				active={phoneActive}
+				setActive={setPhoneActive}
 			/>
 		</div>
 	);

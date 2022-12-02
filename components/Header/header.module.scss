@@ -1,8 +1,13 @@
+.container {
+	background: #3789ca;
+}
+
 .header {
 	display: flex;
+	margin: 0 auto;
 	z-index: 10;
 	justify-content: space-between;
-	width: 100%;
+	width: 1300px;
 	height: 77px;
 	background: #3789ca;
 	position: sticky;
@@ -11,14 +16,13 @@
 		justify-content: space-between;
 		width: 151px;
 		align-items: center;
-		margin-left: 60px;
 	}
 	&__menu {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 377px;
-		margin-right: 112px;
+		margin-right: 32px;
 		button {
 			background-color: #3789ca;
 		}

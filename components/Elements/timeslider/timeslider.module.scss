@@ -14,8 +14,8 @@
 		align-items: center;
 		width: 250px;
 		height: 20px;
-		background-color: white;
-		border: 1px solid #0039a6;
+		background: #d9d9d9;
+
 		border-radius: 4px;
 
 		&_thumb {
@@ -29,6 +29,7 @@
 				padding-left: 0px;
 			}
 		}
+
 		&_thumb:nth-child(2n) {
 			background-image: url('/Clock.svg');
 			width: 34px;
@@ -37,8 +38,14 @@
 				margin-top: 36px;
 				width: 35px;
 				height: 16px;
-				padding-left: 3px;
+				padding: 0 auto;
 			}
+		}
+		&_thumb:last-child {
+			margin-left: 4px;
+		}
+		&_thumb:nth-last-child(3) {
+			margin-left: -3px;
 		}
 		&_track {
 			height: 20px;

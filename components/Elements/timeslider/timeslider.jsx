@@ -10,9 +10,11 @@ const TimeSlider = () => {
 
 	const numtotime = (num) => {
 		const hour = Math.floor(num / 60);
-		const minute = num - hour * 60;
+		let minute = num - hour * 60;
+		if (minute === 0) {
+			minute = '00';
+		}
 		// 1440
-
 		return (num = `${hour}:${minute}`);
 	};
 
@@ -51,7 +53,7 @@ const TimeSlider = () => {
 						className={styles.timeslider__line_track}
 						index={state.index}></div>
 				)}
-				pearling={true}
+				pearling={false}
 				withTracks={true}
 				max={1430}
 				minDistance={10}

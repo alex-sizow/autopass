@@ -11,7 +11,9 @@ function MyApp({ Component, pageProps }) {
 		<SessionProvider session={pageProps.session}>
 			<main className={GeometriaFont.className}>
 				<Layout>
-					<Component {...pageProps} />
+					<div className='container'>
+						<Component {...pageProps} />
+					</div>
 				</Layout>
 			</main>
 		</SessionProvider>
@@ -19,4 +21,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-
