@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import AddLocation from '../Elements/Addlocation/Addlocation';
+import AddLocation from '../Elements/Addlocation/addlocation';
 import AddPhone from '../Elements/Addphone/addphone';
 import styles from '../Messanger/messanger.module.scss';
 const Messanger = () => {
@@ -74,7 +74,9 @@ const Messanger = () => {
 				</div>
 
 				{message.map((num) => (
-					<div className={styles.messanger__communication_my}>
+					<div
+						className={styles.messanger__communication_my}
+						key={num}>
 						<div>{num}</div>
 						<Image
 							className={
@@ -145,10 +147,12 @@ const Messanger = () => {
 			<AddLocation
 				active={locationActive}
 				setActive={setLocationActive}
+				key={1}
 			/>
 			<AddPhone
 				active={phoneActive}
 				setActive={setPhoneActive}
+				key={2}
 			/>
 		</div>
 	);
